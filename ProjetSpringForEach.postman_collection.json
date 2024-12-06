@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "5446498e-8d7b-4508-bb73-cf6dffbe0e04",
+		"name": "LivraisonSpring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30209518"
+	},
+	"item": [
+		{
+			"name": "POST Livraison",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"adresseDepart\": \"10 avenue des Champs-Élysées, Paris\",\n    \"adresseDestination\": \"15 boulevard Haussmann, Paris\",\n    \"detailsColis\": \"Document confidentiel\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/livraison/livraisons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"livraison",
+						"livraisons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Utilisateur",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nom\": \"Dupont\",\n  \"email\": \"dupont@example.com\",\n  \"motDePasse\": \"SecurePassword!2024\",\n  \"role\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/livraison/utilisateur/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"livraison",
+						"utilisateur",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Colis",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"poids\": 2.5,\n    \"dimensions\": \"40x30x20 cm\",\n    \"contenu\": \"Livres\",\n    \"statut\": \"En cours de livraison\",\n    \"idLivraison\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/livraison/colis/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"livraison",
+						"colis",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
